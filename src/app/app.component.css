@@ -1,0 +1,10 @@
+.container {
+  background-image: url(../assets/index.jpg);
+  overflow: hidden;
+  position: relative;
+}
+
+h1 {
+  background-color: white;
+  text-align: center;
+}

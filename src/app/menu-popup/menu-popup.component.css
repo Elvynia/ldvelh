@@ -1,0 +1,68 @@
+a {
+    display: block;
+    cursor: pointer;
+}
+
+.sound:hover{
+  transform: scale(2);
+}
+.load:hover{
+  transform: scale(2);
+}
+.save:hover{
+  transform: scale(2);
+}
+
+.menu {
+    position: absolute;
+    transform: translate(-50%,-50%);
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    left: 25px;
+    top: 25px;
+}
+
+.principal {
+  position: relative;
+  transform: translate(-50%,-50%);
+  background-color: red;
+  border-radius: 50%;
+  height: 100px;
+  width:100px;
+  top:50%;
+  left:50%;
+}
+
+.sound {
+    transform: translate(-50%,-50%);
+    position: relative;
+    background-color: blue;
+    border-radius: 50%;
+    height: 50px;
+    width:50px;
+    top: 17%;
+    left: 52%;
+}
+
+.save {
+    transform: translate(-50%,-50%);
+    background-color: yellow;
+    position: relative;
+    border-radius: 50%;
+    height: 50px;
+    width:50px;
+    top:40%;
+    left:74%;
+}
+
+.load {
+  transform: translate(-50%,-50%);
+  background-color: green;
+  position: relative;
+    border-radius: 50%;
+    height: 50px;
+    width:50px;
+    top:2%;
+    left:85%;
+}
