@@ -1,4 +1,5 @@
 export class Choices {
+  id: number;
   text : string;
-  id : number
+  nextId : number;
 }

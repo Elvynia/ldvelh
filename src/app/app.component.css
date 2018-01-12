@@ -2,9 +2,11 @@
   background-image: url(../assets/index.jpg);
   overflow: hidden;
   position: relative;
+  width: 700px;
+  height: 850px;
 }
 
-h1 {
+.title {
   background-color: white;
   text-align: center;
 }

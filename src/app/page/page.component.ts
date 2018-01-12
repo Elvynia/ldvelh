@@ -15,7 +15,7 @@ export class PageComponent implements OnInit {
   constructor(private pageService: PageService) {}
 
   ngOnInit() {
-    this.getPage(0);
+    this.getPage(1);
   }
 
   getPage(id: number) : void {

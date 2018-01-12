@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { PageComponent } from "./page/page.component";
 
 const routes : Routes = [
-  { path: '', redirectTo: '/page/0', pathMatch: 'full' },
+  { path: '', redirectTo: '/page/1', pathMatch: 'full' },
   { path: 'page/:id', component: PageComponent }
   //{ path: 'page', component: PageComponent }
 ];

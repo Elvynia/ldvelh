@@ -3,7 +3,7 @@
     <p>{{page.text}}</p>
     <div>
       <ul class="nav nav-pills nav-stacked">
-        <li *ngFor="let choice of page.choices" ><a routerLink="/page/{{choice.id}}" (click)="getPage(choice.id)">{{choice.id}} : {{choice.text}}</a>
+        <li *ngFor="let choice of page.choices" ><a routerLink="/page/{{choice.nextId}}" (click)="getPage(choice.nextId)">{{choice.nextId}} : {{choice.text}}</a>
       </ul>
     </div>
   </div>
