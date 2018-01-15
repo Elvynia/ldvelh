@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {StorageService} from './storage.service';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +9,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'La Foret de la Malediction';
   background = '../../assets/index.jpg';
+
+  constructor(private storageService: StorageService) {}
+
+  ngOnInit() {
+    this.storageService.initialize();
+  }
 }

@@ -4,6 +4,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import {Page} from "../page";
 import { PAGES } from '../mock-pages';
 import { PageService } from '../page.service';
+import { StorageService } from '../storage.service';
 
 @Component({
   selector: 'app-page',
@@ -13,16 +14,17 @@ import { PageService } from '../page.service';
 export class PageComponent implements OnInit {
   page : Page;
 
-  constructor(private pageService: PageService,private route: ActivatedRoute,
+  constructor(private pageService: PageService, private storageService: StorageService,private route: ActivatedRoute,
   private router: Router) {}
 
   ngOnInit() {
-    this.getPage(1);
-    /*let id = this.route.snapshot.paramMap.get('id');
-    let idint = parseInt(id);
-    this.pageService.getPage(idint)
-      .subscribe((page) => this.page = page);
-      console.log(id);*/
+    this.route.paramMap.subscribe((paramMap) => {
+      this.getPage(+paramMap.get('id'));
+    });
+
+    this.storageService.storage.filter((save) => save!=null)
+        .map((save) => save.id)
+        .subscribe((pageId) => this.getPage(pageId));
   }
 
   getPage(id: number) : void {

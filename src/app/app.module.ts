@@ -9,6 +9,7 @@ import { MenuCharacterComponent } from './menu-character/menu-character.componen
 import { AppRoutingModule } from './/app-routing.module';
 import { PageService } from './page.service';
 import { ChoicesService } from './choices.service';
+import { StorageService } from './storage.service';
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import { ChoicesService } from './choices.service';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [PageService, ChoicesService],
+  providers: [PageService, ChoicesService, StorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

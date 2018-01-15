@@ -400,6 +400,6 @@ export const CHOICES: Array<Choices[]> = [
       [{ id: 396 ,text: "XXX", nextId:364},{ id: 396 ,text: "XXX", nextId:96}],
       [{ id: 397 ,text: "XXX", nextId:163},{ id: 397 ,text: "XXX", nextId:393}],
       [{ id: 398 ,text: "XXX", nextId:320},{ id: 398 ,text: "XXX", nextId:193}],
-      [{ id: 399, text : "Game Over", nextId:1}],
-      [{ id: 400, text : "Game Over", nextId:1}]
+      [{ id: 399, text : "Game Over", nextId:0}],
+      [{ id: 400, text : "Game Over", nextId:0}]
 ];
