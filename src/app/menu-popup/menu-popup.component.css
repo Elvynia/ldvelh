@@ -3,16 +3,6 @@ a {
     cursor: pointer;
 }
 
-.sound:hover{
-  transform: scale(2);
-}
-.load:hover{
-  transform: scale(2);
-}
-.save:hover{
-  transform: scale(2);
-}
-
 .menu {
     position: absolute;
     transform: translate(-50%,-50%);
@@ -26,43 +16,63 @@ a {
 .principal {
   position: relative;
   transform: translate(-50%,-50%);
-  background-color: red;
+  background-image: url(../../assets/options.png);
+  opacity: 0.1;
   border-radius: 50%;
-  height: 100px;
-  width:100px;
+  height: 64px;
+  width:64px;
   top:50%;
   left:50%;
+}
+
+.principal:hover {
+  opacity: 1;
 }
 
 .sound {
     transform: translate(-50%,-50%);
     position: relative;
-    background-color: blue;
+    background-image: url(../../assets/mute.png);
+    opacity: 0.3;
     border-radius: 50%;
-    height: 50px;
-    width:50px;
-    top: 17%;
-    left: 52%;
+    height: 40px;
+    width:40px;
+    top: 25%;
+    left: 50%;
+}
+
+.sound:hover {
+  opacity: 1;
 }
 
 .save {
     transform: translate(-50%,-50%);
-    background-color: yellow;
+    background-image: url(../../assets/save.png);
+    opacity: 0.3;
     position: relative;
     border-radius: 50%;
-    height: 50px;
-    width:50px;
-    top:40%;
-    left:74%;
+    height: 40px;
+    width:40px;
+    top:44%;
+    left:66%;
+}
+
+.save:hover {
+  opacity: 1;
 }
 
 .load {
   transform: translate(-50%,-50%);
-  background-color: green;
+  background-image: url(../../assets/load.png);
   position: relative;
+      opacity: 0.3;
     border-radius: 50%;
-    height: 50px;
-    width:50px;
-    top:2%;
-    left:85%;
+    height: 40px;
+    width:40px;
+    top:15%;
+    left:75%;
+}
+
+.load:hover {
+  opacity: 1;
 }
