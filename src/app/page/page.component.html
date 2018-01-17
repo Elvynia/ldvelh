@@ -1,12 +1,11 @@
 <div class="container">
+
   <div class="well">
     <p>{{page.text}}</p>
-    <div>
-      <ul class="nav nav-pills nav-stacked">
-        <li *ngFor="let choice of page.choices" ><a routerLink="/page/{{choice.nextId}}">{{choice.nextId}} : {{choice.text}}</a>
-      </ul>
-    </div>
+    <app-event *ngIf="event"
+                [event]="event"></app-event>
+    <p *ngIf="page.text2"> {{page.text2}}</p>
+    <app-choice [choices]="choices"></app-choice>
   </div>
-
 
 </div>

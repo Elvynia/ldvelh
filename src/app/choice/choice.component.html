@@ -1,0 +1,7 @@
+<div>
+  <ul class="nav nav-pills nav-stacked">
+    <li *ngFor="let choix of choices.choice" >
+      <a routerLink="/page/{{choix.nextId}}">{{choix.nextId}} : {{choix.text}}</a>
+    </li>
+  </ul>
+</div>

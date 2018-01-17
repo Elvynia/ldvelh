@@ -1,0 +1,7 @@
+Inventaire
+
+<mat-grid-list cols="3" rowHeight="1:1">
+  <mat-grid-tile *ngFor="let item of items">
+    <button><img src="{{item.url}}" alt="{{item.id}}" /></button>
+  </mat-grid-tile>
+</mat-grid-list>

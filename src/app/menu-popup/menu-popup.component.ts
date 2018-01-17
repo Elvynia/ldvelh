@@ -42,7 +42,9 @@ export class MenuPopupComponent implements OnInit {
   }
 
   sound () : void {
-
+      this.storageService.save('1');
+      this.load();
+      //this.router.navigate(['id',1]);
   }
 
 }
