@@ -5,6 +5,7 @@ import { MatDialog, MatDialogRef } from '@angular/material';
 import {InventoryComponent} from '../inventory/inventory.component';
 import {MapComponent} from '../map/map.component';
 
+import { Dice } from '../dice';
 
 @Component({
   selector: 'app-menu-character',
@@ -17,6 +18,7 @@ export class MenuCharacterComponent {
   mapRef : MatDialogRef<MapComponent>;
 
   constructor(private dialog:MatDialog) { }
+  dice = new Dice;
 
   openInventory () {
     this.inventoryRef = this.dialog.open(InventoryComponent, {

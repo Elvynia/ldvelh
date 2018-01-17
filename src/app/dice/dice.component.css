@@ -15,7 +15,3 @@ button {
 button:hover {
   transform: scale(2);
 }
-
-div {
-  text-align: center;
-}

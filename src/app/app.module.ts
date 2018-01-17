@@ -21,6 +21,8 @@ import { ChoiceService } from './choice.service';
 import { ChoiceComponent } from './choice/choice.component';
 import { MonsterService } from './monster.service';
 import { MapComponent } from './map/map.component';
+import { DiceService } from './dice.service';
+import { DiceComponent } from './dice/dice.component';
 
 
 @NgModule({
@@ -34,7 +36,8 @@ import { MapComponent } from './map/map.component';
     ShopComponent,
     FightComponent,
     ChoiceComponent,
-    MapComponent
+    MapComponent,
+    DiceComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,7 @@ import { MapComponent } from './map/map.component';
     MatGridListModule
   ],
   entryComponents: [InventoryComponent,MapComponent],
-  providers: [PageService, StorageService, EventService, ChoiceService, MonsterService],
+  providers: [PageService, StorageService, EventService, ChoiceService, MonsterService, DiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
