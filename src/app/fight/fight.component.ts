@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 import { Subscription } from 'rxjs'
 
@@ -13,6 +13,7 @@ import { DiceService } from '../dice.service';
 })
 export class FightComponent implements OnInit {
 	@Input() monsters : Array<Monster>;
+	@Output() onFinish: EventEmitter<void>;
 	monster: Monster;
 	subscription : Subscription;
 
@@ -20,7 +21,9 @@ export class FightComponent implements OnInit {
 		private route: ActivatedRoute,
 		private router: Router,
 		private monsterService : MonsterService,
-		private diceService : DiceService) { }
+		private diceService : DiceService) {
+		this.onFinish = new EventEmitter();
+	}
 
 	ngOnInit() {
 		// Charger le premier monstre.
@@ -47,8 +50,10 @@ export class FightComponent implements OnInit {
 		if (this.monsters && this.monsters.length > 0) {
 			this.monster = this.monsters.shift();
 		} else {
+			// Fin du combat
 			this.monster.url = '../../assets/rip.png';
 			this.subscription.unsubscribe();
+			this.onFinish.emit();
 		}
 	}
 

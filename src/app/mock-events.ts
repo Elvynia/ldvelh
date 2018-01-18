@@ -1,5 +1,6 @@
 import { Event } from './event';
 import { AddMonsterConstraint } from './add-monster-constraint';
+import { ChoiceConstraint } from './choice-constraint';
 import { Monster } from './monster';
 
 export const EVENTS: Array<Event> = [
@@ -14,7 +15,8 @@ export const EVENTS: Array<Event> = [
 	type :"fight",
 	constraints: [
 		new AddMonsterConstraint(9),
-		new AddMonsterConstraint(15)
+		new AddMonsterConstraint(15),
+		new ChoiceConstraint(9)
 	]
 }, {
 	id: 15,
