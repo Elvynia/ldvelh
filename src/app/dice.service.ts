@@ -1,15 +1,15 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { Subject } from 'rxjs';
 
 import { Dice } from './dice';
 
 @Injectable()
 export class DiceService {
-  result : BehaviorSubject<number>;
+  result : Subject<number>;
   dice : Dice;
 
   constructor() {
-    this.result = new BehaviorSubject<number>(null);
+    this.result = new Subject<number>();
     this.dice = new Dice();
   }
 
